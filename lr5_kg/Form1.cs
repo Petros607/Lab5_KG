@@ -181,7 +181,8 @@ namespace lr5_kg
         private void button11_Click(object sender, EventArgs e)
         {
             k += 1;
-            dz++;
+            if (dz <= 1) dz *= 2;
+            else dz++;
             x *= dz;
             y *= dz;
             //z *= dz;
@@ -191,7 +192,8 @@ namespace lr5_kg
         private void button12_Click(object sender, EventArgs e)
         {
             k -= 1;
-            dz--;
+            if (dz <= 1) dz /= 2;
+            else dz--;
             x /= dz;
             y /= dz;
             //z *= dz;
@@ -201,7 +203,7 @@ namespace lr5_kg
         private void button1_Click(object sender, EventArgs e)
         {
             rad = Math.PI / 180;
-            radius = 100;
+            radius = 70;
             x = 0;
             y = 0;
             z = 0;
